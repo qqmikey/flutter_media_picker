@@ -1,0 +1,73 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build ios --no-codesign -t /Users/mikey/projects/flutter/flutter_media_picker/lib/flutter_media_picker.dart
+
+## exception
+
+ArgumentError: Invalid argument(s)
+
+```
+#0      _StringBase._interpolate (dart:core-patch/string_patch.dart:846:9)
+#1      BuildIOSCommand.runCommand (package:flutter_tools/src/commands/build_ios.dart:83:62)
+<asynchronous suspension>
+#2      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:559:18)
+#3      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#4      _rootRunUnary (dart:async/zone.dart:1132:38)
+#5      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#6      _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#7      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#8      Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#9      Future._complete (dart:async/future_impl.dart:473:7)
+#10     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#11     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#12     _rootRun (dart:async/zone.dart:1124:13)
+#13     _CustomZone.run (dart:async/zone.dart:1021:19)
+#14     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#15     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#16     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#17     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:115:13)
+#18     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, v1.5.4-hotfix.2, on Mac OS X 10.14.5 18F132, locale ru-RU)
+    [32m•[39m Flutter version 1.5.4-hotfix.2 at /Users/mikey/flutter
+    [32m•[39m Framework revision 7a4c33425d (7 weeks ago), 2019-04-29 11:05:24 -0700
+    [32m•[39m Engine revision 52c7a1e849
+    [32m•[39m Dart version 2.3.0 (build 2.3.0-dev.0.5 a1668566e5)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    [32m•[39m Android SDK at /Users/mikey/Library/Android/sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-28, build-tools 28.0.3
+    [32m•[39m Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1136-b06)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m iOS toolchain - develop for iOS devices (Xcode 10.2)
+    [32m•[39m Xcode at /Applications/Xcode.app/Contents/Developer
+    [32m•[39m Xcode 10.2, Build version 10E125
+    [32m•[39m ios-deploy 1.9.4
+    [32m•[39m CocoaPods version 1.5.0
+
+[32m[✓][39m Android Studio (version 3.2)
+    [32m•[39m Android Studio at /Applications/Android Studio.app/Contents
+    [32m•[39m Flutter plugin version 31.3.1
+    [32m•[39m Dart plugin version 181.5656
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1136-b06)
+
+[32m[✓][39m IntelliJ IDEA Ultimate Edition (version 2018.1)
+    [32m•[39m IntelliJ at /Applications/IntelliJ IDEA.app
+    [32m•[39m Flutter plugin version 31.3.1
+    [32m•[39m Dart plugin version 181.4203.498
+
+[32m[✓][39m Connected device (2 available)
+    [32m•[39m sgaj      • 642e6a527debfb97a165f10a930534c476a72355 • ios • iOS 12.0
+    [32m•[39m iPhone SE • 0E1BE770-B3AD-4A09-8858-F1642AA95276     • ios • com.apple.CoreSimulator.SimRuntime.iOS-12-2 (simulator)
+
+[32m•[39m No issues found!
+```
